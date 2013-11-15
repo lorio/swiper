@@ -38,10 +38,12 @@ body {display : block;  height :100%;
 	left: 300px;
 	top : 80px;
 	position : relative;
-	width : 250px;
+	width : 50%;
 	padding-bottom: 100px;
+	text-align: center;
 	}
-	#albums p {margin:0;padding: 0}
+	#albums p {margin:0;padding: 10px 0;}
+	#albums p:nth-child(n+2) {text-align: left;}
 	#albums h3 {font-size : 1.5em; font-weight : 600}	
 footer {
 		position : fixed;
@@ -53,3 +55,13 @@ footer {
 		width: 100%;
 }
 footer h5 {text-align: center; font-weight: 600; font-size:0.6em}
+
+@media all and (max-width: 600px) {
+	#albums {
+		clear: both;
+		left: 0;
+		width: 90%;
+	}
+	#albums p {margin-left: 1em; text-align: left;}
+	#accordion {position: relative;top: 1em;}
+}
